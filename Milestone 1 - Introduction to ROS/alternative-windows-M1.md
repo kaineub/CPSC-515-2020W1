@@ -11,39 +11,36 @@ I like the Windows Terminal because of how customizable it is. All settings are 
 We want to change the default shell to be our Ubuntu installation and the default directory to be the home directory. This can be achieved by the following:
 
 1. Click on the drop down menu and select settings
-
-  ![ros-extension](images/ros-extension.png)
+![ros-extension](images/terminal-with-menu.PNG)
 1. Go to `profiles` -> `list` and find the entry with the name of our WSL installation
-  * By default the name will be `Ubuntu-18.04` 
+    * By default the name will be `Ubuntu-18.04` 
 1. Add the following line to entry from the previous step
-  * `"startingDirectory": "//wsl$/Ubuntu-18.04/home/<your_wsl_name>/"`
-  * Remember to add a comma to the previous line and to replace `<your_wsl_name>` with the name you setup in the Ubuntu installation
-  * Now opening the WSL shell will start in the home directory
+    * `"startingDirectory": "//wsl$/Ubuntu-18.04/home/<your_wsl_name>/"`
+    * Remember to add a comma to the previous line and to replace `<your_wsl_name>` with the name you setup in the Ubuntu installation
+    * Now opening the WSL shell will start in the home directory
 1. Copy the `guid` attribute's value to the `defaultProfile` attribute located at the top of the settings file
-  * This will make the default shell be our WSL shell in the home directory
+    * This will make the default shell be our WSL shell in the home directory
 
 There are a ton more options that you can play around with like keyboard shortcuts and colour schemes. A partial screenshot of my settings.json file with is shown below.
 
-![windows-terminal-settings](images/windows-terminal-setup.png)
-
+![ros-extension](images/windows-terminal-settings.PNG)
 # VS Code Setup
 VS Code has tons of useful extensions that can easilly be installed. To access the extension menu, click on the icon in the sidebar with the 3 stacked blocks and another one floating beside it.
 
 1. Install the "Remote - WSL" extension
-  * VS Code should detect WSL automatically and recommend that you install this. If not, search for it in the extensions menu.
-  * In WSL shells, we can execute `code .` to open VS Code in the current directory
+    * VS Code should detect WSL automatically and recommend that you install this. If not, search for it in the extensions menu.
+    * In WSL shells, we can execute `code .` to open VS Code in the current directory
 1. Install the "ROS" extension
-  * Adds syntax highlighting for C/C++, Python, launch files, etc.
-  * Installs the "C/C++" and "Python" extensions as dependencies
-  * You can view information about ROS from within VS Code
-  * e.g. at the very bottom of the Window, click on `ROS1.melodic` (might be named something slightly different) to view the topics and services published
-  
-  ![ros-extension](images/ros-extension.png)
+    * Adds syntax highlighting for C/C++, Python, launch files, etc.
+    * Installs the "C/C++" and "Python" extensions as dependencies
+    * You can view information about ROS from within VS Code
+    * e.g. at the very bottom of the Window, click on `ROS1.melodic` (might be named something slightly different) to view the topics and services published
+    ![ros-extension](images/ros-extension.PNG)
 1. Install the "CMake" extension
-  * Adds syntax highlighting for CMakeLists.txt
-  * Note: this is different from the "Cmake Tools" extension which is also useful but not necessary
+    * Adds syntax highlighting for CMakeLists.txt
+    * Note: this is different from the "Cmake Tools" extension which is also useful but not necessary
 1. Install the "vscode-icons" extension(Optional)
-  * Adds many more icons to VS Code, making it easier to recognize filetypes at a glance
+    * Adds many more icons to VS Code, making it easier to recognize filetypes at a glance
 
 # Useful Tips
 * Running `explorer.exe .` in the terminal will open Windows Explorer in the current directory
